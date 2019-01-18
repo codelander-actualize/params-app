@@ -32,4 +32,10 @@ class Api::ParamsExamplesController < ApplicationController
 		render 'segment_params.json.jbuilder'
 	end
 
+	def body_params
+		user_input = params[:secret_info]
+		@message = "The secret info is #{user_input}"
+		render 'body_params.json.jbuilder'
+	end
+
 end
